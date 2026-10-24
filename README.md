@@ -1,31 +1,25 @@
-﻿# IAM Longevity Rx Checkout
+# IAM Longevity Rx Checkout
 
-A React-based checkout portal for **IAM Longevity Rx**, providing product selection, payment processing, coupon validation, and order confirmation.
+Checkout for **IAM Longevity Rx**. Shoppers choose a treatment, enter contact and shipping details, apply a coupon when one is offered, pay, and reach the order confirmation page.
 
-## Features
+The code is in the existing repository `longevityrx00`. A second repository was not created.
 
-- **Checkout flow** â€” Multi-step checkout with contact details, shipping, and payment
-- **Coupon validation** â€” Promo code verification
-- **Thank-you page** â€” Post-order confirmation (/thankyou-page)
-- **Error handling** â€” Dedicated error page for invalid routes
-- **State validation** â€” Shipping state eligibility checks
-- **Sticky.io integration** â€” Payment SDK for order processing
+## Stack
 
-## Tech Stack
+- React
+- Create React App
+- React Router
+- Axios
+- Tailwind CSS
+- styled-components
+- React Hot Toast
 
-| Technology | Purpose |
-|---|---|
-| React 18 | UI framework |
-| Create React App | Build tooling & dev server |
-| React Router v6 | Client-side routing |
-| Tailwind CSS | Utility-first styling |
-| Axios | HTTP client for API calls |
+## Requirements
 
-## Prerequisites
+- Node.js 18 or later
+- npm
 
-- **Node.js** 18 or later
-
-## Getting Started
+## Run locally
 
 ```bash
 git clone https://github.com/shiv-dev-01/longevityrx00.git
@@ -34,27 +28,29 @@ npm install
 npm start
 ```
 
-## Available Scripts
+The dev server opens at http://localhost:3000.
 
-| Script | Description |
-|---|---|
-| `npm start` | Start development server |
-| `npm run build` | Create production build in `build/` |
-| `npm test` | Run test suite |
+## Scripts
 
-## API Configuration
+| Command | What it runs |
+| --- | --- |
+| `npm run start` | `react-scripts start` |
+| `npm run build` | `react-scripts build` |
+| `npm run test` | `react-scripts test` |
+| `npm run eject` | `react-scripts eject` |
 
-| Setting | Value |
-|---|---|
-| **Base URL** | `https://panel.whitelabelmd.com/longevityrx/api/` |
-| **Coupon API** | `https://panel.whitelabelmd.com/longevityrx/api/check_coupons` |
+## Project files
 
-API endpoints are defined in `src/utils/Constant.js`.
+- `public`
+- `src`
+- `.gitignore`
+- `package-lock.json`
+- `package.json`
+- `README.md`
+- `tailwind.config.js`
 
-## Production Build
+## Configuration
 
-```bash
-npm run build
-```
+API hosts and site settings are in `src\utils\Constant.js`.
+Files named `.env` stay on your machine and are not part of this repository. Use `.env.example` when the project includes one.
 
-Deploy the contents of the `build/` directory to any static hosting provider.

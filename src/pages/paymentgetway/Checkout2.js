@@ -2930,7 +2930,7 @@ const Checkout2 = () => {
                                       (parseFloat(discount_amount) || 0)
                                     ).toFixed(2)
                                 : "$" + product.product_price} */}
-                                 ${Number(getproductPrice).toFixed(2)}
+                                 ${Number(product?.product_price || 0).toFixed(2)}
                             </span>
                             {showMonthlyCostLine && monthlyCost != null && (
                             <span>
